@@ -1,6 +1,2 @@
-<%if @user then%>
-  <%= button_to 'Log out', destroy_user_session_path, :method => :delete %>
-<%else%>
-  <%= button_to 'Sign in', new_user_session_path, method: :get %>
-  <%= button_to 'Log in', user_session_path, method: :post %>
-<%end %>
+
+<%= button_to 'Stories', story_index_path, :method => :get %>
