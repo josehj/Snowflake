@@ -16,7 +16,9 @@
         <%= button_to 'Sign up', new_user_registration_path,  :method => :get %>
         <%= button_to 'Log in', user_session_path, :method => :post %>
       <%end %>
+      <%= button_to 'Home', root_path,  :method => :get %>
     </div>
+
     <%= yield %>
   </body>
 </html>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171031163255) do
+ActiveRecord::Schema.define(version: 20171101175658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,16 @@ ActiveRecord::Schema.define(version: 20171031163255) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "step1", default: false
+    t.boolean "step2", default: false
+    t.boolean "step3", default: false
+    t.boolean "step4", default: false
+    t.boolean "step5", default: false
+    t.boolean "step6", default: false
+    t.boolean "step7", default: false
+    t.boolean "step8", default: false
+    t.boolean "step9", default: false
+    t.boolean "step10", default: false
     t.index ["user_id"], name: "index_stories_on_user_id"
   end
 

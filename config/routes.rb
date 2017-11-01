@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   #stories
 
-  get 'stories/new',  to: 'story#new',  as: 'new_story'
+  get 'form/story',  to: 'form#story',  as: 'new_story'
 end
