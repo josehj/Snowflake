@@ -1,0 +1,6 @@
+hola aca van las historias
+<% current_user.stories.each do |story| %>
+   <%= story.title %>
+<%end %>
+
+<%= button_to 'New story', new_story_url,  :method => :get %>

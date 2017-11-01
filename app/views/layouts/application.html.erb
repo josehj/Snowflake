@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <div id='top-bar'>
+      <%if user_signed_in? then%>
+        <%= button_to 'Log out', destroy_user_session_path, :method => :delete %>
+      <%else%>
+        <%= button_to 'Sign up', new_user_registration_path,  :method => :get %>
+        <%= button_to 'Log in', user_session_path, :method => :post %>
+      <%end %>
+    </div>
     <%= yield %>
   </body>
 </html>
