@@ -16,13 +16,11 @@ $(function(){
 
     $("#saveChanges").click(function() {
       var id_ins = document.URL.split("/");
-      alert(id_ins[4]);
       sentence = $("#new_sentence").val();
       var configuration ={
         'sentence'        : JSON.stringify(sentence),
         'story_id'        : JSON.stringify(id_ins[4]),
       };
-      alert(id_ins[4]);
       $.ajax({
         type: "GET",
         dataType: 'json',
