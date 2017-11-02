@@ -13,23 +13,34 @@ $(function(){
     $('#new_sentence').change(function(){
         countWords();
     });
-});
 
-// $("#saveChanges").click(function() {
-//   var configuration ={
-//     'radius'        : JSON.stringify(radius),
-//     'number'        : JSON.stringify(number),
-//     'ids'           : JSON.stringify(ids),
-//     'configs'       : JSON.stringify(configs),
-//     'ids_configs' : JSON.stringify(ids_configs),
-//   };
-//   $.ajax({
-//     type: "GET",
-//     dataType: 'json',
-//     contentType: "application/json; charset=utf-8",
-//     url: "/dashboard/data",
-//     data: configuration,
-//     success: function (data) {
-//     }
-//   });
-// });
+    $("#saveChanges").click(function() {
+      var id_ins = document.URL.split("/");
+      alert(id_ins[4]);
+      sentence = $("#new_sentence").val();
+      var configuration ={
+        'sentence'        : JSON.stringify(sentence),
+        'story_id'        : JSON.stringify(id_ins[4]),
+      };
+      alert(id_ins[4]);
+      $.ajax({
+        type: "GET",
+        dataType: 'json',
+        contentType: "application/json; charset=utf-8",
+        url: "/story/"+id_ins[4]+"/step/one",
+        data: configuration,
+        success: function (data) {
+          if (data.hasOwnProperty('error')){
+            alert(data["error"]);
+            return;
+          }
+          if (data["status"]) {
+            $(".notice").text("ok!");
+          }else {
+            $(".notice").text("error!");
+          }
+        }
+      });
+    });
+
+});

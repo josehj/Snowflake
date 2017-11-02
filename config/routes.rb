@@ -11,14 +11,16 @@ Rails.application.routes.draw do
   get 'form/story',  to: 'form#story',  as: 'new_story'
 
   #Steps
-  get 'step/one',  to: 'step#one',  as: 'step_one'
-  get 'step/two',  to: 'step#two',  as: 'step_two'
-  get 'step/three',  to: 'step#three',  as: 'step_three'
-  get 'step/four',  to: 'step#four',  as: 'step_four'
-  get 'step/five',  to: 'step#five',  as: 'step_five'
-  get 'step/six',  to: 'step#six',  as: 'step_six'
-  get 'step/seven',  to: 'step#seven',  as: 'step_seven'
-  get 'step/eight',  to: 'step#eight',  as: 'step_eight'
-  get 'step/nine',  to: 'step#nine',  as: 'step_nine'
-  get 'step/ten',  to: 'step#ten',  as: 'step_ten'
+  resources :story do
+    get 'step/one',  to: 'step#one',  as: 'step_one'
+    get 'step/two',  to: 'step#two',  as: 'step_two'
+    get 'step/three',  to: 'step#three',  as: 'step_three'
+    get 'step/four',  to: 'step#four',  as: 'step_four'
+    get 'step/five',  to: 'step#five',  as: 'step_five'
+    get 'step/six',  to: 'step#six',  as: 'step_six'
+    get 'step/seven',  to: 'step#seven',  as: 'step_seven'
+    get 'step/eight',  to: 'step#eight',  as: 'step_eight'
+    get 'step/nine',  to: 'step#nine',  as: 'step_nine'
+    get 'step/ten',  to: 'step#ten',  as: 'step_ten'
+  end
 end

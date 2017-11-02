@@ -1,14 +1,14 @@
 <h1><%=@story.title%></h1>
 <div>
   <h2>SnowFlake steps:</h2>
-  <%= button_to 'step 1', step_one_url,  :method => :get %>
-  <%= button_to 'step 2', step_two_url,  :method => :get %>
-  <%= button_to 'step 3', step_three_url,  :method => :get %>
-  <%= button_to 'step 4', step_four_url,  :method => :get %>
-  <%= button_to 'step 5', step_five_url,  :method => :get %>
-  <%= button_to 'step 6', step_six_url,  :method => :get %>
-  <%= button_to 'step 7', step_seven_url,  :method => :get %>
-  <%= button_to 'step 8', step_eight_url,  :method => :get %>
-  <%= button_to 'step 9', step_nine_url,  :method => :get %>
-  <%= button_to 'step 10', step_ten_url,  :method => :get %>
+  <%= button_to 'step 1', story_step_one_path(@story),  :method => :get %>
+  <%= button_to 'step 2', story_step_two_path(@story),  :method => :get %>
+  <%= button_to 'step 3', story_step_three_path(@story),  :method => :get %>
+  <%= button_to 'step 4', story_step_four_path(@story),  :method => :get %>
+  <%= button_to 'step 5', story_step_five_path(@story),  :method => :get %>
+  <%= button_to 'step 6', story_step_six_path(@story),  :method => :get %>
+  <%= button_to 'step 7', story_step_seven_path(@story),  :method => :get %>
+  <%= button_to 'step 8', story_step_eight_path(@story),  :method => :get %>
+  <%= button_to 'step 9', story_step_nine_path(@story),  :method => :get %>
+  <%= button_to 'step 10', story_step_ten_path(@story),  :method => :get %>
 </div>

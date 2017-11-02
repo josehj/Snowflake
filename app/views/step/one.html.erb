@@ -1,7 +1,9 @@
-<h2>one</h2>
+<h2>Step one</h2>
+<h3><%= @story.title%></h3>
 
 <label for="new_sentence">15 word summary</label>
 </br>
-<textarea id="new_sentence" cols="40" rows="5"></textarea>
+<textarea id="new_sentence" cols="40" rows="5"><%= @story.sentence%></textarea>
 <p>WordsCount:<span id="counter">0</span></p>
-<%= button_to 'Save'%>
+<button id="saveChanges">Save</button>
+<div class="notice"></div>
