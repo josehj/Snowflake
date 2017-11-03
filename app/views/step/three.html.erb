@@ -1,1 +1,7 @@
-three
+<h2>Step three</h2>
+<h3><%= @story.title%></h3>
+estos son los personajes:
+<% @story.characters.each do |chr| %>
+  </br><%= button_to chr.name+" "+chr.last_name, story_character_path(@story,chr), method: :get %>
+<%end %>
+<%= button_to 'New character', story_new_character_url,  :method => :get %>

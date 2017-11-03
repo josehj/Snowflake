@@ -1,1 +1,9 @@
-two
+<h2>Step two</h2>
+<h3><%= @story.title%></h3>
+
+<label for="new_paragraph">4 sentences paragraph</label>
+</br>
+<textarea id="new_paragraph" cols="40" rows="5"><%= @story.paragraph%></textarea>
+<p>sentencesCount:<span id="counter">0</span></p>
+<button id="saveChanges">Save</button>
+<div class="notice"></div>

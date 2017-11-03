@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   #Steps
   resources :story do
+
+    resources :character, only: [:show]
+    get 'form/character',  to: 'form#character',  as: 'new_character'
     get 'step/one',  to: 'step#one',  as: 'step_one'
     get 'step/two',  to: 'step#two',  as: 'step_two'
     get 'step/three',  to: 'step#three',  as: 'step_three'
